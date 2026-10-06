@@ -1,0 +1,838 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #020914;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+.website {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  min-height: 78px;
+  padding: 12px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  background: rgba(2, 9, 20, 0.96);
+  border-bottom: 1px solid #15324a;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #00aaff;
+  border-radius: 50%;
+
+  background: #061727;
+  box-shadow: 0 0 25px rgba(0, 170, 255, 0.25);
+}
+
+.logo span {
+  color: #00aaff;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: #dce8f2;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00b7ff;
+}
+
+.nav-button {
+  padding: 12px 22px;
+  background: #00aaff;
+  color: white;
+
+  border-radius: 8px;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.nav-button:hover {
+  background: #008bd1;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   LANGUAGE BUTTONS
+========================= */
+
+.language-switcher,
+.language-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.language-switcher button,
+.language-buttons button,
+.language-btn {
+  padding: 9px 15px;
+  border: 1px solid #00aaff;
+  border-radius: 25px;
+
+  background: transparent;
+  color: #00b7ff;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.language-switcher button:hover,
+.language-buttons button:hover,
+.language-btn:hover {
+  background: #00aaff;
+  color: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 680px;
+  padding: 90px 8%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+
+  background:
+    radial-gradient(
+      circle at 80% 40%,
+      rgba(0, 170, 255, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(135deg, #020914, #061a2d);
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 720px;
+}
+
+.small-title {
+  color: #00b7ff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 6vw, 72px);
+  line-height: 1.08;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #00b7ff;
+}
+
+.hero-text {
+  max-width: 620px;
+  color: #a9bdcd;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-block;
+  padding: 15px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.primary-button {
+  background: #00aaff;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #008bd1;
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  border: 1px solid #00aaff;
+  color: #00b7ff;
+}
+
+.secondary-button:hover {
+  background: #00aaff;
+  color: white;
+}
+
+
+/* =========================
+   HERO LOGO CARD
+========================= */
+
+.hero-card {
+  flex-shrink: 0;
+
+  width: 340px;
+  height: 340px;
+
+  border: 1px solid #087fba;
+  border-radius: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0, 170, 255, 0.15),
+      transparent 60%
+    ),
+    #061727;
+
+  box-shadow: 0 20px 70px rgba(0, 170, 255, 0.18);
+}
+
+.electric-icon {
+  font-size: 65px;
+  margin-bottom: 12px;
+}
+
+.hero-card h2 {
+  color: #00b7ff;
+  font-size: 75px;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.hero-card p {
+  text-align: center;
+  color: #c5d6e3;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 55px;
+}
+
+.section-title p:first-child {
+  color: #00b7ff;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+}
+
+.section-title h2 {
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.section-title h2 span {
+  color: #00b7ff;
+}
+
+.section-title p:last-child {
+  color: #9db3c5;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+  padding: 100px 8%;
+  background: #061321;
+}
+
+.service-container {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  min-height: 280px;
+  padding: 35px 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  background: linear-gradient(
+    145deg,
+    #0a2236,
+    #051422
+  );
+
+  border: 1px solid #17445f;
+  border-radius: 18px;
+
+  transition: 0.35s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: #00aaff;
+  box-shadow: 0 20px 50px rgba(0, 170, 255, 0.15);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #00aaff;
+
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.service-card h3 {
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #9eb4c5;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+
+/* =========================
+   SERVICE IMAGES
+========================= */
+
+.service-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+
+  border-radius: 14px;
+  margin-bottom: 22px;
+
+  display: block;
+}
+
+
+/* =========================
+   WHY US
+========================= */
+
+.why-us {
+  padding: 100px 8%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 70px;
+
+  background: #020914;
+}
+
+.why-content {
+  max-width: 520px;
+}
+
+.why-content h2 {
+  font-size: clamp(40px, 5vw, 58px);
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.why-content h2 span {
+  color: #00b7ff;
+}
+
+.why-content > p:last-child {
+  color: #9eb4c5;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.features div {
+  width: 170px;
+  min-height: 190px;
+
+  padding: 25px 15px;
+
+  text-align: center;
+
+  background: #071a2b;
+  border: 1px solid #173d56;
+  border-radius: 15px;
+
+  transition: 0.3s;
+}
+
+.features div:hover {
+  border-color: #00aaff;
+  transform: translateY(-6px);
+}
+
+.features strong {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+  background: #00aaff;
+
+  font-size: 22px;
+}
+
+.features h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.features p {
+  color: #8ea6b8;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   BOOKING
+========================= */
+
+.booking-section {
+  padding: 100px 8%;
+  background: #061321;
+}
+
+.booking-box {
+  max-width: 720px;
+  margin: auto;
+
+  padding: 45px;
+
+  background: linear-gradient(
+    145deg,
+    #0a2236,
+    #051422
+  );
+
+  border: 1px solid #17445f;
+  border-radius: 20px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.booking-box label {
+  display: block;
+
+  color: #dce8f2;
+  font-size: 15px;
+  font-weight: 600;
+
+  margin-bottom: 8px;
+}
+
+.booking-box input,
+.booking-box textarea,
+.booking-box select {
+  width: 100%;
+
+  padding: 15px 16px;
+  margin-bottom: 22px;
+
+  border: 1px solid #28506a;
+  border-radius: 8px;
+
+  background: #020b16;
+  color: white;
+
+  font-size: 15px;
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.booking-box input:focus,
+.booking-box textarea:focus,
+.booking-box select:focus {
+  border-color: #00aaff;
+  box-shadow: 0 0 0 3px rgba(0, 170, 255, 0.08);
+}
+
+.booking-box textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.booking-box input[type="file"] {
+  padding: 12px;
+}
+
+.booking-box small {
+  display: block;
+  color: #8199ab;
+  margin-top: -15px;
+  margin-bottom: 22px;
+}
+
+.booking-box button {
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #00aaff;
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.booking-box button:hover {
+  background: #008bd1;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  padding: 90px 20px;
+  text-align: center;
+  background: #020914;
+}
+
+.contact h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  color: #9eb4c5;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.contact a {
+  display: block;
+
+  width: fit-content;
+  margin: 12px auto;
+
+  color: #00b7ff;
+  font-size: 18px;
+
+  transition: 0.3s;
+}
+
+.contact a:hover {
+  color: white;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 35px 20px;
+  text-align: center;
+
+  background: #01070e;
+  border-top: 1px solid #12304a;
+}
+
+footer h3 {
+  color: #00b7ff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+footer p {
+  color: #71899b;
+  font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .navbar {
+    padding: 12px 4%;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .hero {
+    padding: 70px 5%;
+  }
+
+  .hero-card {
+    width: 290px;
+    height: 290px;
+  }
+
+  .why-us {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .features {
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 800px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 70px 25px;
+  }
+
+  .hero-content {
+    max-width: 700px;
+  }
+
+  .hero-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .service-container {
+    grid-template-columns: 1fr;
+    max-width: 550px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .features div {
+    width: 250px;
+  }
+}
+
+
+@media (max-width: 550px) {
+
+  .navbar {
+    min-height: 70px;
+    padding: 10px 18px;
+  }
+
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .nav-button {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-card {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero-card h2 {
+    font-size: 60px;
+  }
+
+  .services,
+  .why-us,
+  .booking-section {
+    padding: 70px 20px;
+  }
+
+  .section-title h2 {
+    font-size: 32px;
+  }
+
+  .booking-box {
+    padding: 25px 20px;
+  }
+
+  .contact h2 {
+    font-size: 32px;
+  }
+}
+.booking-success {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #e8fff0;
+  border: 1px solid #38a169;
+  text-align: center;
+}
+
+.booking-success h3 {
+  margin: 0 0 8px;
+  color: #16803c;
+}
+
+.booking-success p {
+  margin: 5px 0;
+  color: #245b3a;
+}
+.booking-success {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #e8fff0;
+  border: 2px solid #28a745;
+  text-align: center;
+}
+
+.booking-success h3 {
+  margin: 0 0 8px;
+  color: #16803c;
+  font-size: 22px;
+}
+
+.booking-success p {
+  margin: 6px 0;
+  color: #245b3a;
+}
